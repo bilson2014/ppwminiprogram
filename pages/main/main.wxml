@@ -1,0 +1,60 @@
+<view class="container">
+
+ 
+
+
+<view class="touch-content">
+
+  <view class="titlePage">
+                    <text class="tText">{{projectName}}</text>
+                    <view class="line"></view>
+                    <image class='cus' bindtap='tel' mode="widthFix" src="../image/cus.png"></image>
+ </view>
+
+ <view class="infoAbout">
+
+       <view class="left">
+           <image src="{{principalImg}}"></image>
+           <view>{{principalName}}</view>
+           <view class="ser">视频管家</view>
+       </view>
+
+       <view class="right">
+           <view class="rightItem">
+               <image src="../image/footPhone.png"></image>
+               <text><text class="circle">:</text>{{principalPhone}}</text>
+           </view>
+           <view class="rightItem">
+               <image src="../image/footMail.png"></image>
+               <text><text class="circle">:</text>{{principalEmail}}</text>
+           </view>
+          
+       </view>
+
+       <view class="itemLine"></view>
+
+ </view>
+
+      <!-- <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="{{item.needMove ? 'touchmove' : ''}}" wx:for="{{items}}" > -->
+    <view data-id="{{item.id}}" class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart"       bindtouchmove="{{item.needMove ? '' : ''}}" wx:for="{{items}}" catchtap="{{item.needMove ? 'info' : ''}}" data-index='{{item.title}}'>
+        <view class="title">{{item.title}}</view>
+        <view class="content {{item.needMove ? '' : 'noNeed'}}">
+          {{item.content}}
+          <view class="content-info">{{item.contentInfo}}</view>
+        </view>
+        
+          <block wx:if="{{item.needMove}}">
+            <view class="infoShow">
+                {{item.info}}
+                <image class="img" src="..//image/right.png" ></image>
+            </view>
+          </block>
+
+         <view class="info" catchtap="info" data-id="{{item.id}}" data-index='{{item.title}}'>{{item.info}}</view>
+
+      </view>
+
+</view>
+
+
+</view>

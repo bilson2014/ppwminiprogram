@@ -1,0 +1,38 @@
+
+<swiper
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+         
+          <swiper-item wx:for="{{array}}" wx:key="*this"  >
+            <view class="swiperItem"  style="height:{{height}}px;width:{{width}}px;left:-{{left}}px;top:{{left}}px">
+                <image  mode="widthFix"   src="{{item.url ? item.url : '../image/def.jpg'}}"></image>
+                <view class="setText"><block wx:if="{{item.type}}">【{{item.type}}】</block>     {{item.content}}</view>
+            </view>    
+          </swiper-item>
+
+          <swiper-item class="lastPage">
+
+          <view class="con">
+              <view class="titlePage">
+                    <text class="tText">{{projectName}}</text>
+                    <view class="line"></view>
+                    <image class='cus' bindtap='tel' mode="widthFix" src="../image/cus.png"></image>
+              </view>
+              <view class="touch-item" >
+                      <view class="title">视频时长</view>
+                      <view class="content">{{dimensionId}}</view>                     
+              </view>
+              <view class="touch-item" >
+                      <view class="title">画幅比例</view>
+                      <view class="content">{{pictureRatio}}</view>                     
+              </view>
+              <view class="touch-item" >
+                      <view class="title">影片风格</view>
+                      <view class="content">{{videoStyle}}</view>                     
+              </view>
+          </view>    
+  
+          </swiper-item>
+         
+</swiper>
+ 

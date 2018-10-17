@@ -1,0 +1,170 @@
+page {
+background-color:#f4f4f4;
+padding-bottom: 20rpx;
+}
+
+
+
+.cus{
+
+  width: 120rpx;
+  position: absolute;
+  right: 20rpx;
+  top:0;
+}
+
+.line{
+  width: 1px;
+  height: 60rpx;
+  background: #999;
+  opacity: 0.5;
+  position: absolute;
+  right:160rpx;
+  top:20rpx;
+}
+
+
+.titlePage{
+  background: white;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 5%;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  position: relative;
+  margin-bottom: 40rpx;
+  font-size: 35rpx;
+  color:#000;
+}
+
+.titleView{
+  padding-left:20rpx;
+}
+
+
+.itemContent{
+  width: 90%;
+  background: white;
+  margin: 0 auto;
+  padding-left:20rpx;
+  padding-right: 20rpx;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 40rpx;
+}
+
+.itemTitle{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10rpx;
+  color:#000;
+  font-size: 29rpx;
+}
+
+.noborder{
+  border-bottom:none !important;
+}
+
+.content{
+  position: relative;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.content .cn{
+font-size: 24rpx;
+color:#a1a1a1;
+}
+
+.content .en{
+  font-size: 22rpx;
+  color:#ccc;
+}
+
+.content .name{
+  font-size: 24rpx;
+  position: absolute;
+  right:0;
+  top:5rpx;
+  color:#a1a1a1;
+
+}
+
+.costTitle{
+  font-size: 24rpx;
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+  color:#333
+}
+
+.cost{
+   position: absolute;
+   bottom:20rpx;
+   right:20rpx;
+   text-align: right;
+}
+
+.marginUp{
+  padding-bottom: 25rpx !important;
+}
+
+.finalCost{
+  font-size: 24rpx;
+  color:#fe5453;
+}
+
+.Cost{
+  font-size: 22rpx;
+  color:#999;
+  text-decoration:line-through;
+  position:absolute;
+  right:5rpx;
+  top:60rpx;
+}
+
+
+.itemCost{
+  position: relative;
+}
+
+.costTitle{
+  font-size: 30rpx;
+  color:#333;
+}
+
+.cCost{
+  font-size: 30rpx;
+  position: absolute;
+  right:0;
+  top:20rpx;
+  color:#666;
+}
+
+.control{
+  text-align: center;
+  color:#999;
+  font-size:22rpx;
+  position: relative;
+  padding-bottom: 10rpx;
+}
+
+.noOpen{
+width:22rpx;
+height: 22rpx;
+
+}
+
+.open{
+width:22rpx;
+height: 22rpx;
+transform:rotate(180deg);
+
+}
+
+.red{
+color:#fe5453 !important;
+}

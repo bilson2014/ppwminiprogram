@@ -1,0 +1,180 @@
+page {
+background-color:#f4f4f4;
+
+}
+
+.con{
+padding:0rpx 20rpx;
+}
+
+.titlePage{
+  background: white;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 5%;
+  position: relative;
+  margin-bottom: 40rpx;
+  font-size: 35rpx;
+  color:#000;
+}
+
+.tText{
+  padding-left: 20rpx;
+}
+
+.cus{
+
+  width: 120rpx;
+  position: absolute;
+  right: 20rpx;
+  top:0;
+}
+
+.line{
+  width: 1px;
+  height: 60rpx;
+  background: #999;
+  opacity: 0.5;
+  position: absolute;
+  right:160rpx;
+  top:20rpx;
+}
+.titleView{
+  padding-left:20rpx;
+}
+
+.isCheck{
+  color:#333 ;
+}
+
+.isDay{
+ color:#fe5453 !important ;
+}
+
+.isDay .bCircle{
+  border:1px solid #fe5453 !important;
+}
+
+.isDay .mCircle{
+ background: #fe5453 !important;
+}
+
+.isCheck .bCircle{
+  border:1px solid #333;
+}
+
+.isCheck .mCircle{
+ background: #333;
+}
+
+.isNotCheck{
+  color:#888;
+}
+
+.isNotCheck .bCircle{
+  border:1px solid #cbcbcb;
+}
+
+.isNotCheck .mCircle{
+ background: #cbcbcb;
+}
+
+
+.setDate{
+  background: white;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  padding:20rpx 0rpx 20rpx 0rpx;
+  margin-bottom: 40rpx;
+  padding-bottom:150rpx !important;
+}
+
+.dataItem{
+
+ position: relative;
+
+}
+
+.setTime{
+  position: absolute;
+  left:20rpx;
+}
+
+.day{
+  font-size: 24rpx;
+}
+
+.year{
+  font-size: 16rpx;
+}
+
+.titleLine{
+
+padding-left: 140rpx;
+padding-right: 40rpx;
+display: block;
+height: 40rpx;
+
+}
+.bCircle{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  background: white;
+  position: relative;
+  z-index: 5;
+}
+
+.bTitle{
+  vertical-align: top;
+  display: inline-block;
+  width: 90%;
+}
+
+.titleContent{
+  display: block;
+  padding-left: 136rpx;
+  padding-right: 40rpx;
+  position: relative;
+  top:-1rpx;
+}
+
+.mCircle{
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  top:22rpx;
+  left:156rpx;
+}
+
+.mContent{
+  vertical-align: top;
+  display: inline-block;
+  width: 90%;
+  font-size: 28rpx;
+  border-left:1px dashed #a4a4a4;
+  padding-left: 40rpx;
+  padding-top: 14rpx;
+  margin-left: 24rpx;
+}
+
+.dataItem:last-child .mContent{
+
+  height:10rpx;
+
+}
+
+
+
+

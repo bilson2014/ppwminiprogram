@@ -1,0 +1,11 @@
+
+
+<calendar binddayClick="dayClick" bindnextMonth="next" bindprevMonth="prev"  binddateChange="dateChange" year="{{year}}" month="{{month}}" days-color="{{demo2_days_style}}"/>
+
+    <block  wx:if="{{hasInfo}}">
+        <view class="wordItem">
+          <view class="contentWord">{{content}}</view>
+        </view>
+    </block>
+
+   

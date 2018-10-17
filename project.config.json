@@ -1,0 +1,141 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
+	"appid": "wxfe2196e169a32c3f",
+	"projectname": "paipianzhushou",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 15,
+			"list": [
+				{
+					"id": 0,
+					"name": "main",
+					"pathName": "pages/main/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "date",
+					"pathName": "pages/date/date",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "srotyBoard",
+					"pathName": "pages/storyBoard/storyBoard",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "projectInfo",
+					"pathName": "pages/projectInfo/projectInfo",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "htmlCode",
+					"pathName": "pages/main/main",
+					"query": "q=\"https://test.apaipian.com/?id=1\"",
+					"scene": "1012"
+				},
+				{
+					"id": -1,
+					"name": "code",
+					"pathName": "pages/code/code",
+					"query": "",
+					"scene": "1012"
+				},
+				{
+					"id": 6,
+					"name": "htmlCode",
+					"pathName": "pages/main/main",
+					"query": "path=\"pages/main/main?id=2\"",
+					"scene": "1001"
+				},
+				{
+					"id": 7,
+					"name": "schedule",
+					"pathName": "pages/schedule/schedule",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "videoList",
+					"pathName": "pages/videoList/videoList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storyBoard",
+					"pathName": "pages/storyBoard/storyBoard",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "fen",
+					"pathName": "pages/fen/fen",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "quotation",
+					"pathName": "pages/quotation/quotation",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "verVideo",
+					"pathName": "pages/verVideo/verVideo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "openid",
+					"pathName": "pages/openid/openid",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "webView",
+					"pathName": "pages/webView/webView"
+				}
+			]
+		}
+	}
+}

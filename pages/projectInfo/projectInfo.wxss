@@ -1,0 +1,138 @@
+page{
+  background-color:#f4f4f4;
+}
+
+.pageTitle{
+  height: 108rpx;
+  line-height: 108rpx;
+  font-size:36rpx;
+  padding-left: 30rpx;
+}
+
+.topItem,.midContent{
+background: white;
+padding-left:32rpx;
+padding-right:32rpx;
+}
+
+.topTitle,.topContent{
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 30rpx;
+}
+
+.topTitle view{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topTitle view:last-child{
+  position: absolute;
+  right:0;
+}
+
+
+.topContent{
+  border-bottom: none;
+  font-size:24rpx;
+  color:#888888;
+}
+
+.topContent view{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topContent view:last-child{
+  position: absolute;
+  right:0;
+}
+
+.infoItem{
+border-bottom: 1px solid #e5e5e5;
+}
+
+.infoItem:last-child{
+  border-bottom:none !important;
+}
+
+.infoTitle{
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 100%;
+  position: relative;
+  
+  font-size: 30rpx;
+}
+
+
+
+.infoTitle view{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 28rpx;
+  color:#333;
+}
+
+.infoTitle view:nth-child(2){
+  position: absolute;
+  right:60rpx;
+  color:#8b8b8b;
+}
+
+
+.open{
+width: 20rpx;
+height: 20rpx;
+position: absolute;
+right:20rpx;
+top:40rpx;
+
+}
+
+.openOn{
+transform:rotate(-90deg);
+-webkit-transform:rotate(-90deg); /* Safari 和 Chrome */
+}
+.openOff{
+transform:rotate(90deg);
+-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+}
+
+
+.contentItem{
+  position: relative;
+  width: 100%;
+  font-size: 24rpx;
+  color:#888888;
+  margin-bottom: 40prx;
+  padding-left: 40rpx;
+  padding-bottom:40rpx;
+
+}
+
+.contentItem view{
+display: inline-block;
+vertical-align: top;
+}
+
+.name{
+  width: 50%;
+}
+
+.day{
+  width: 20%;
+}
+
+.onContent{
+height: auto;
+padding: 12rpx 0pt 0pt 16rpx;
+}
+
+.offContent{
+height: 0pt;
+overflow:hidden;
+}

@@ -1,0 +1,32 @@
+<!--pages/schedule/schedule.wxml-->
+
+<view class="con">
+
+<view class="titlePage">
+                    <text class="tText">{{projectName}}</text>
+                    <view class="line"></view>
+                    <image class='cus' bindtap='tel' mode="widthFix" src="../image/cus.png"></image>
+ </view>
+
+
+<view class="setDate">
+
+      <view class="dataItem {{item.index ? 'isCheck' : 'isNotCheck'}} {{item.theDay ? 'isDay' : ''}}" wx:for="{{array}}" data-index="{{index}}" bindtap='check'>
+
+         <view class="setTime">
+               <view class="day">{{item.day}}</view>
+               <view class="year">{{item.years}}</view>
+         </view>
+         <view class="titleLine">
+               <view class="bCircle"></view>
+               <view class="bTitle"></view>
+         </view>
+          <view class="titleContent">
+               <view class="mCircle"></view>
+               <view class="mContent"><text>{{item.content}}</text></view>
+         </view>
+      
+      </view>
+
+</view>
+</view>

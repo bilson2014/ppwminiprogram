@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/main/main",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/date/date",
+    "pages/storyBoard/storyBoard",
+    "pages/projectInfo/projectInfo",
+    "pages/code/code",
+    "pages/schedule/schedule",
+    "pages/videoList/videoList",
+    "pages/fen/fen",
+    "pages/quotation/quotation",
+    "pages/verVideo/verVideo",
+    "pages/openid/openid",
+    "pages/webView/webView"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "拍片助手",
+    "navigationBarTextStyle":"#fff"
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  }
+}

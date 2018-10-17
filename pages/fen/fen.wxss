@@ -1,0 +1,28 @@
+page {
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+
+.swiper{
+  position: relative;
+}
+
+image{
+  width: 100%;
+}
+
+.content{
+background: rgba(51,51,51,0.5);
+height: 40rpx;
+width: 100%;
+color:white;
+font-size: 20rpx;
+line-height: 40rpx;
+position: absolute;
+bottom: 0;
+text-align: center;
+}
+
+

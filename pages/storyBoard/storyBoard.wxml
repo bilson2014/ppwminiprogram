@@ -1,0 +1,25 @@
+<!--pages/storyBoard/storyBoard.wxml-->
+<view class="page">
+  <view class="pageTitle">{{projectName}}</view>
+
+
+  <view  class="titleItem"   wx:for="{{arrayItem}}" id="{{index}}" data-text="{{item.type}}" data-index="{{index}}" wx:key="{{array}}" bindtap='openItem'>
+          
+          <view class="titleTop" >
+             <image class="logo" src="{{item.url}}"></image>
+             <view class="title">{{item.title}}</view>
+             <image class="open {{item.isOpen ? 'openOn' : 'openOff'}}" src="../image/right.png"></image>
+          </view>  
+          <scroll-view  scroll-x  class="titleContent {{item.isOpen ? 'onContent' : 'offContent'}}"> 
+              <view class="infoItem {{arrayH.picScale == 2 ? 'threeContent' : 'twoContent'}}" wx:for="{{array}}" wx:for-item="arrayH">
+                       <image mode="widthFix" src="{{arrayH.photo}}"></image>
+                       <view>{{arrayH.name}}</view>
+              </view>
+          </scroll-view> 
+
+  </view>
+
+
+
+
+</view>

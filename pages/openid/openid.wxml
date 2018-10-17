@@ -1,0 +1,2 @@
+<!--pages/openid/openid.wxml-->
+<text>{{openid}}</text>

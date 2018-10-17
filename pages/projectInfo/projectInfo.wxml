@@ -1,0 +1,38 @@
+<view class="page">
+
+  <view class="pageTitle">{{projectName}}</view>
+
+  <view class="topItem">
+          <view class="topTitle">
+                <view>总费用</view>
+                <view>{{total}}</view>
+          </view>
+          <view class="topContent">
+                <view>优惠金额</view>
+                <view>{{dis}}</view>
+          </view>
+  </view>
+
+  <view class="pageTitle">报价明细</view>
+
+ <view class="midContent">
+   
+       <view class="infoItem" wx:for="{{array}}" id="{{index}}" wx:key="{{array}}" bindtap='open'>
+            <view class="infoTitle">  
+                <view>{{item.name}}</view>
+                <view></view>
+                <image class="open {{item.isOpen ? 'openOn' : 'openOff'}}" src="../image/right.png"></image>
+            </view>
+            <view class="infoContent {{item.isOpen ? 'onContent' : 'offContent'}}"  wx:key="{{arrayItem}}" >
+                 <view class="contentItem" wx:for="{{item.itemArray}}">
+                    <view class="name">{{item.sideName}}</view>
+                    <view class="day">{{item.days}}</view>
+                    <view class="price">{{item.sum}}元</view>
+                 </view>
+
+            </view>
+       </view>
+
+ </view>
+
+</view>

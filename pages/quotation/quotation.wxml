@@ -1,0 +1,80 @@
+<view class="titlePage">
+      <view>{{projectName}}</view>
+      <view class="line"></view>
+      <image class='cus' bindtap='tel' mode="widthFix" src="../image/cus.png"></image>
+</view>
+
+<view class="itemContent"> 
+       <view class="itemTitle">TOTAL COST 费用汇总</view>
+      <view class="content noborder">
+              <view class="itemCost">
+                  <view class="costTitle">费用总计</view>
+                  <view class="cCost red">￥{{discount}}</view>
+                  <view class="Cost" wx:if="{{discountRate > 0 }}" >￥{{total}}</view>   
+              </view>
+       </view>
+       <view class="content noborder">
+              <view class="cn">费用合计</view>
+              <view class="en">Total Direct Cost</view>
+              <view class="name">￥{{subTotal}}</view>
+       </view>       
+        <view class="content noborder">
+              <view class="cn">{{taxRate}}%营业加值税</view>
+              <view class="en">Vat({{taxRate}}%)</view>
+              <view class="name">￥{{tax}}</view>
+       </view>
+</view>
+
+<view class="itemContent" bindtap='openProduction'> 
+       <view class="itemTitle">PRODUCTION 前期制作</view>
+       <view class="itemCost">
+           <view class="costTitle">费用总计</view>
+           <view class="cCost red">￥{{production[0].total}}</view>
+       </view>
+       <block wx:if="{{production[0].index}}">
+       <view class="content noborder" wx:for="{{production[0].array}}" data-index="{{index}}" bindtap='check'>
+                <view class="cn">{{item.name}}</view>
+                <view class="en">{{item.enName}}</view>
+                <view class="name">￥{{item.total}}</view>
+       </view>
+       </block>
+       <view class="control">
+            <block wx:if="{{production[0].index == 0}}">
+                <view>查看详细费用信息
+                      <image class="noOpen" src="../image/upOrDown.png"></image>
+                </view>
+            </block>    
+            <block wx:if="{{production[0].index == 1}}" >
+                <image class="open" src="../image/upOrDown.png"></image>
+            </block>
+       </view>
+</view>
+
+<view class="itemContent" bindtap='openPostProduction'> 
+       <view class="itemTitle">POST PRODUCTION 后期制作</view>
+       <view class="itemCost">
+           <view class="costTitle">费用总计</view>
+           <view class="cCost red">￥{{postProduction[0].total}}</view>
+       </view>
+       <block wx:if="{{postProduction[0].index}}">
+          <view class="content noborder" wx:for="{{postProduction[0].array}}" data-index="{{index}}" bindtap='check'>
+                    <view class="cn">{{item.name}}</view>
+                    <view class="en">{{item.enName}}</view>
+                    <view class="name">￥{{item.total}}</view>
+          </view>
+       </block>
+       <view class="control">
+
+       
+            <block wx:if="{{postProduction[0].index == 0}}">
+                <view>查看详细费用信息
+                      <image class="noOpen" src="../image/upOrDown.png"></image>
+                </view>
+            </block>    
+            <block wx:if="{{postProduction[0].index == 1}}" >
+                <image class="open" src="../image/upOrDown.png"></image>
+            </block>
+       </view>
+</view>
+
+
