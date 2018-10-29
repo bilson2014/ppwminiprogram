@@ -1,0 +1,15 @@
+
+
+<image wx:if="{{photo!= 'null' && photo!=''}}"  class="vImager" mode="widthFix" src="{{photo}}"></image>
+<view  wx:if="{{photo== 'null' || photo==''}}" class="noImg">{{showName}}</view>
+
+<view class="userInfo">
+      <view class="name">{{name}}</view>
+      <view>{{typeName}}</view>
+      <view>{{group}}</view>
+      <view>{{city}}</view>
+</view>
+
+<view class="des">
+      {{des}}
+</view>

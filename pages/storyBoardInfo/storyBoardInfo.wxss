@@ -1,0 +1,54 @@
+.userInfo{
+  font-size:30rpx;
+color:#666;
+text-align:left;
+width:250rpx;
+position:relative;
+display:inline-block;
+right:0;
+top:50rpx;
+vertical-align:top;
+left:100rpx;
+
+}
+
+.noImg{
+  width:350rpx;
+  height: 350rpx;
+  position: relative;
+  top:50rpx;
+  left:50rpx;
+  background: #ebebeb;
+  text-align: center;
+  line-height: 350rpx;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.userInfo view{
+  margin-top: 10rpx;
+}
+
+.name{
+font-weight: bold;
+}
+
+.vImager{
+
+     width:350rpx;
+     position: relative;
+     top:50rpx;
+     left:50rpx;
+     display: inline-block;
+     vertical-align: top;
+
+}
+
+.des{
+font-size:26rpx;
+top:450rpx;
+padding:50rpx;
+line-height:40rpx;
+margin-top: 50rpx;
+}
