@@ -1,64 +1,176 @@
-page{
-  background-color:#f4f4f4;
+page {
+background-color:#f4f4f4;
+padding-bottom: 20rpx;
 }
 
-.pageTitle{
 
-height: 108rpx;
-line-height: 108rpx;
-font-size:36rpx;
-padding-left: 30rpx;
 
+.cus{
+
+  width: 120rpx;
+  position: absolute;
+  right: 20rpx;
+  top:0;
 }
 
-.titleItem{
-  overflow:hidden;
-  margin-bottom:20rpx;
-
+.line{
+  width: 1px;
+  height: 60rpx;
+  background: #999;
+  opacity: 0.5;
+  position: absolute;
+  right:160rpx;
+  top:20rpx;
 }
 
-.titleTop{
-  width: 100%;
-  height:88rpx;
+
+.titlePage{
   background: white;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 5%;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  position: relative;
+  margin-bottom: 40rpx;
+  font-size: 35rpx;
+  color:#000;
+}
+
+.titleView{
+  padding-left:20rpx;
+}
+
+
+.itemContent{
+  width: 90%;
+  background: white;
+  margin: 0 auto;
+  padding-left:20rpx;
+  padding-right: 20rpx;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 40rpx;
+  padding-bottom:20rpx;
+}
+
+.itemTitle{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10rpx;
+  color:#000;
+  font-size: 29rpx;
+}
+
+.noborder{
+  border-bottom:none !important;
+}
+
+.content{
+  position: relative;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #e0e0e0;
+  height: 300rpx;
+}
+
+.content .cn{
+font-size: 24rpx;
+color:#a1a1a1;
+}
+
+.content .en{
+  font-size: 22rpx;
+  color:#ccc;
+}
+
+.content .name{
+  font-size: 24rpx;
+  position: absolute;
+  right:0;
+  top:5rpx;
+  color:#a1a1a1;
+
+}
+
+.costTitle{
+  font-size: 24rpx;
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+  color:#333
+}
+
+.cost{
+   position: absolute;
+   bottom:20rpx;
+   right:20rpx;
+   text-align: right;
+}
+
+.marginUp{
+  padding-bottom: 25rpx !important;
+}
+
+.finalCost{
+  font-size: 24rpx;
+  color:#fe5453;
+}
+
+.Cost{
+  font-size: 22rpx;
+  color:#999;
+  text-decoration:line-through;
+  position:absolute;
+  right:5rpx;
+  top:60rpx;
+}
+
+
+.itemCost{
   position: relative;
 }
 
-.title{
+.costTitle{
   font-size: 30rpx;
-  position:absolute;
-  top:24rpx;
-  left:120rpx;
+  color:#333;
 }
 
-.logo{
-
-width:26rpx;
-height:26rpx;
-position:absolute;
-top:28rpx;
-left:40rpx;
-
+.cCost{
+  font-size: 30rpx;
+  position: absolute;
+  right:0;
+  top:20rpx;
+  color:#666;
 }
 
+.control{
+  text-align: center;
+  color:#999;
+  font-size:22rpx;
+  position: relative;
+  top:10rpx;
+}
+
+.noOpen{
+width:22rpx;
+height: 22rpx;
+
+}
 
 .open{
-width: 20rpx;
-height: 20rpx;
-position: absolute;
-right:20rpx;
-top:40rpx;
+width:22rpx;
+height: 22rpx;
+transform:rotate(180deg);
 
 }
 
-.openOn{
-transform:rotate(-90deg);
--webkit-transform:rotate(-90deg); /* Safari 和 Chrome */
+.red{
+color:#fe5453 !important;
 }
-.openOff{
-transform:rotate(90deg);
--webkit-transform:rotate(90deg); /* Safari 和 Chrome */
-}
+
 
 .titleContent{
   width:auto;
@@ -66,18 +178,16 @@ transform:rotate(90deg);
   transition: all .5s;
   -webkit-transition: all .5s; /* Safari 和 Chrome */
   white-space: nowrap;
-  
+  overflow: hidden;
 }
 
 .onContent{
 height: 300rpx;
-padding: 12rpx 0pt 0pt 16rpx;
 }
 
 .offContent{
-height: 0rpx;
-
-
+  height: 0rpx !important;
+  padding-bottom: 0 !important;
 }
 
 .infoItem{
@@ -93,7 +203,6 @@ height: 0rpx;
  width: 100%;
  height:400rpx;
  background-color: black;
- 
  vertical-align:top;
 }
 
@@ -101,7 +210,8 @@ height: 0rpx;
  width: 100%;
  height:40rpx;
  font-size: 20rpx;
- background-color: white;
+ color: #999;
+ background:rgba(255,255,255,0.3);
  text-align: center;
  line-height: 40rpx;
  position: absolute;
@@ -111,23 +221,61 @@ height: 0rpx;
 .threeContent{
 width: 225rpx;
 height: 300rpx;
-
 }
-
 
 .threeContent image{
 width: 100%;
+}
 
+.threeContent .noImg{
+  background: #ebebeb;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.threeContent .noImg .word{
+    width: 20rpx !important;
+    position: relative;
+    top: 50% !important;
+    left: 45% !important;
+    transform: translateY(-55%);
+    font-size:26rpx;
+    line-height:30rpx;
+    word-break: break-all; 
+    word-wrap: break-word; 
+    white-space: pre-wrap; 
+    height: auto;
+    background: transparent!important;
 }
 
 .twoContent{
-width: 350rpx;
-height: 196rpx;
+width: 300rpx;
+height: 170rpx;
 overflow: hidden;
-padding-top:50rpx;
+position: relative;
+top:0rpx;
 }
 
 .twoContent image{
   width: 100%;
 }
 
+.twoContent .noImg{
+  background: #ebebeb;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.twoContent .noImg .word{
+    width: 100% !important;
+    font-size:26rpx;
+    position: relative;
+    top:45%;
+    background: transparent !important;
+}
+
+.smallHeight{
+  height:180rpx;
+}

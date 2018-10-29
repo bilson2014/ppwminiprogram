@@ -16,12 +16,17 @@ Page({
 
   },
 
+  tel: function () {
+    wx.makePhoneCall({
+      phoneNumber: '4006609728',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
   
-    this.initPage();
     this.getInfo(options.id);
     this.setData({
       projectName: options.name,
@@ -98,104 +103,7 @@ Page({
     }
   },
 
-  initPage: function (){
-
-    this.data.arrayItem.push({
-      title: "创作团队",
-      url:"../image/team.png",
-      type:"创作团队",
-      isOpen:false
-    });
-    this.data.arrayItem.push({
-      title: "后期制作",
-      url: "../image/team.png",
-      type: "后期制作",
-      isOpen: false
-    });
-    this.data.arrayItem.push({
-      title: "拍摄设备",
-      url: "../image/team.png",
-      type: "拍摄设备",
-      isOpen: false
-    });
-    this.data.arrayItem.push({
-      title: "服装道具",
-      url: "../image/team.png",
-      type: "服装道具",
-      isOpen: false
-    });
-    this.data.arrayItem.push({
-      title: "拍摄场地",
-      url: "../image/team.png",
-      type: "拍摄场地",
-      isOpen: false
-    });
-    this.data.arrayItem.push({
-      title: "配音配乐",
-      url: "../image/team.png",
-      type: "配音配乐",
-      isOpen: false
-    });
-    this.data.arrayItem.push({
-      title: "差旅食宿及杂费",
-      url: "../image/team.png",
-      type: "差旅食宿及杂费",
-      isOpen: false
-    });
-    this.data.arrayItem.push({
-      title: "附加服务",
-      url: "../image/team.png",
-      type: "附加服务",
-      isOpen: false
-    });
-
-    this.setData({
-
-      arrayItem: this.data.arrayItem
-
-    });
-
-  },
-
-
-  openItem:function(e){
-    
-    var id = e.currentTarget.dataset.text;
-    var index = e.currentTarget.id;
-    var hasOpen = this.data.arrayItem[index].isOpen;
-
-    this.data.arrayItem.forEach(function (v, i) {
-
-      if (index == i && !hasOpen){
-          v.isOpen = true;
-      }else{
-          v.isOpen = false;
-      }
-
-    })
-
-
-    this.data.array = [];
-    var checkArray = this.data.array0;
-    
-    for (var i = 0, len = checkArray[0].length; i < len; i++){
-      if(checkArray[0][i].category == id){
-        var item = {};
-        item.name = checkArray[0][i].name;
-        item.photo = app.globalData.urlPath + checkArray[0][i].mainPhoto;
-        item.picScale =  checkArray[0][i].picScale;
-        this.data.array.push(item);
-      } 
-    }
-
-    console.log(this.data.array);
-
-    this.setData({
-      arrayItem: this.data.arrayItem,
-      array: this.data.array
-    });
-  
-  },
+ 
 
   getInfo: function (id) {
 
@@ -211,13 +119,140 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-
-        that.data.array0.push(res.data.result.resources)
-
+        that.reSetData(res.data.result.resources);
       }
     })
 
   },
 
 
+  reSetData: function (item) {
+
+    console.info(item)
+    
+    var arrayOut = [];
+
+
+    for (var i in item) {
+
+      var category = item[i].category;
+      if (i == 0) {
+        var setOut = {};
+        setOut.category = item[i].category;
+        setOut.isOpen = 1;
+        setOut.picScale = item[i].picScale;
+        setOut.categoryEN = item[i].categoryEN;
+        setOut.itemArray = [];
+        arrayOut.push(setOut);
+      }
+      else {
+        var hasSame = false;
+        for (var j in arrayOut) {
+          var setSide = {};
+          if (category == arrayOut[j].category) {
+            hasSame = true;
+          }
+        }
+        if (!hasSame) {
+          var setOut = {};
+          setOut.category = item[i].category;
+          setOut.isOpen = 1;
+          setOut.categoryEN = item[i].categoryEN;
+          setOut.picScale = item[i].picScale;
+          setOut.itemArray = [];
+          arrayOut.push(setOut);
+        }
+      }
+    }
+
+    for (var i in item) {
+      var category = item[i].category;
+      for (var j in arrayOut) {
+        if (category == arrayOut[j].category) {
+          var setSide = {};
+
+          if (item[i].name == "null"){
+            setSide.name = item[i].typeName;
+          }else{
+            setSide.name = item[i].name;
+          }
+         
+            if (item[i].name.length > 9) {
+              setSide.name = item[i].name.substring(0, 9);
+              setSide.name = setSide.name + '...';
+            }
+          if (item[i].mainPhoto != null && item[i].mainPhoto != ''){
+              setSide.mainPhoto = app.globalData.urlPath + '/' +item[i].mainPhoto;
+          }else{
+            setSide.mainPhoto = null
+          }
+          setSide.id = item[i].id; 
+          setSide.typeId = item[i].type; 
+          setSide.subType = item[i].subType;
+          setSide.typeName = item[i].typeName;
+          arrayOut[j].itemArray.push(setSide);
+        }
+      }
+    }
+
+    console.log(arrayOut)
+
+    this.setData({
+      array: arrayOut
+    })
+
+  },
+
+
+  openPostProduction: function (e) {
+
+    var current = e.currentTarget.dataset.index;
+
+    if (this.data.array[current].isOpen == 1) {
+      this.data.array[current].isOpen = 0
+    } else {
+      this.data.array[current].isOpen = 1
+    }
+
+    this.setData({
+      array: this.data.array
+    })
+
+  },
+
+  opento:function(e){
+
+    var id = e.currentTarget.dataset.id;
+    var typeid = e.currentTarget.dataset.typeid;
+    var typeName = e.currentTarget.dataset.type;
+    var name = e.currentTarget.dataset.name;
+    var photo = e.currentTarget.dataset.mainphoto;
+    var types = e.currentTarget.dataset.typename;
+    wx.navigateTo({
+      url: '../storyBoardInfo/storyBoardInfo?id=' + id + '&typeid=' + typeid + '&typeName=' + typeName + '&name=' + name + '&photo=' + photo + '&types=' + types,
+    })
+
+  },
+  onShareAppMessage: function () {
+    var that = this;
+    return {
+      title: '',
+      imageUrl: '../image/chu.jpg',
+      path: '/pages/main/main?id=' + that.data.id,
+      success: function (res) {
+        console.log(res.shareTickets[0])
+        // console.log
+        wx.getShareInfo({
+          shareTicket: res.shareTickets[0],
+          success: function (res) { console.log(res) },
+          fail: function (res) { console.log(res) },
+          complete: function (res) { console.log(res) }
+        })
+      },
+      fail: function (res) {
+        // 分享失败
+        console.log(res)
+      }
+    }
+  }
 })

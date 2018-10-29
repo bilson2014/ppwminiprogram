@@ -40,7 +40,7 @@ App({
   globalData: {
     userInfo: null,
     urlPath:'',
-    head:'https://test.apaipian.com:8088'
+    head:'https://m.apaipian.com'
   },
 
   initImgPath: function () {

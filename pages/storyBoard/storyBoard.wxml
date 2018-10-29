@@ -1,25 +1,34 @@
-<!--pages/storyBoard/storyBoard.wxml-->
-<view class="page">
-  <view class="pageTitle">{{projectName}}</view>
+<view class="titlePage">
+      <view>{{projectName}}</view>
+      <view class="line"></view>
+      <image class='cus' bindtap='tel' mode="widthFix" src="../image/cus.png"></image>
+</view>
 
 
-  <view  class="titleItem"   wx:for="{{arrayItem}}" id="{{index}}" data-text="{{item.type}}" data-index="{{index}}" wx:key="{{array}}" bindtap='openItem'>
-          
-          <view class="titleTop" >
-             <image class="logo" src="{{item.url}}"></image>
-             <view class="title">{{item.title}}</view>
-             <image class="open {{item.isOpen ? 'openOn' : 'openOff'}}" src="../image/right.png"></image>
-          </view>  
-          <scroll-view  scroll-x  class="titleContent {{item.isOpen ? 'onContent' : 'offContent'}}"> 
-              <view class="infoItem {{arrayH.picScale == 2 ? 'threeContent' : 'twoContent'}}" wx:for="{{array}}" wx:for-item="arrayH">
-                       <image mode="widthFix" src="{{arrayH.photo}}"></image>
+
+<view class="itemContent" touchmove='openProduction' wx:for="{{array}}" > 
+       <view class="itemTitle">{{item.categoryEN}}   {{item.category}}</view>
+       <view class="content noborder titleContent {{item.picScale == 1 ? 'smallHeight' : ''}}  {{item.isOpen ? 'onContent' : 'offContent'}}"  >
+          <scroll-view    scroll-x > 
+              <view  bindtap='opento' data-mainPhoto='{{arrayH.mainPhoto}}' data-name='{{arrayH.name}}' data-type='{{arrayH.subType}}'  data-id='{{arrayH.id}}' data-typeid='{{arrayH.typeId}}' data-typename='{{arrayH.typeName}}' wx:for="{{item.itemArray}}" class="infoItem {{item.picScale == 2 ? 'threeContent' : 'twoContent'}}" wx:for-item="arrayH">
+                       <image wx:if="{{arrayH.mainPhoto!='null' && arrayH.mainPhoto!=''}}" mode="widthFix" src="{{arrayH.mainPhoto}}"></image>
+                       <view  wx:if="{{arrayH.mainPhoto=='null' || arrayH.mainPhoto==''}}"class="noImg"><view class="word">{{arrayH.name}}</view></view>
                        <view>{{arrayH.name}}</view>
               </view>
           </scroll-view> 
-
-  </view>
-
-
-
-
+       </view>
+       <view class="control" bindtap='openPostProduction' data-index='{{index}}'>
+           <block wx:if="{{item.isOpen == 0}}">
+                <view>查看详细信息
+                      <image class="noOpen" src="../image/upOrDown.png"></image>
+                </view>
+            </block>    
+            <block wx:if="{{item.isOpen == 1}}" >
+                <image class="open" src="../image/upOrDown.png"></image>
+            </block>
+       </view>
 </view>
+
+
+
+

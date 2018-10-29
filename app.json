@@ -5,6 +5,7 @@
     "pages/logs/logs",
     "pages/date/date",
     "pages/storyBoard/storyBoard",
+    "pages/storyBoardInfo/storyBoardInfo",
     "pages/projectInfo/projectInfo",
     "pages/code/code",
     "pages/schedule/schedule",

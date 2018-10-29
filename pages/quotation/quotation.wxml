@@ -9,8 +9,8 @@
       <view class="content noborder">
               <view class="itemCost">
                   <view class="costTitle">费用总计</view>
-                  <view class="cCost red">￥{{discount}}</view>
-                  <view class="Cost" wx:if="{{discountRate > 0 }}" >￥{{total}}</view>   
+                  <view class="cCost red">￥{{total}}</view>
+                  <view class="Cost" wx:if="{{discountRate > 0 }}" >￥{{subRax}}</view>   
               </view>
        </view>
        <view class="content noborder">

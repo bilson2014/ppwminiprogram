@@ -7,7 +7,7 @@ Page({
     items: [],
     startX: 0, //开始坐标
     startY: 0,
-    id: 20170920173626332,
+    id: 0,
     filmDestPath:'',
     principalName:'',
     principalPhone:'',
@@ -40,10 +40,10 @@ Page({
             this.initProjectInfo(name)
           } else {
             if (index == undefined) {
-              this.initProjectInfo('20170920173626332')
-              // wx.redirectTo({
-              //   url: '../index/index',
-              // })
+            //  this.initProjectInfo('20181024162817964')
+              wx.redirectTo({
+                url: '../index/index',
+              })
             }
           }
         }
@@ -158,18 +158,12 @@ Page({
   //  var id = JSON.stringify(e.currentTarget.dataset.id);
     var id = e.currentTarget.dataset.id;
     var index = e.currentTarget.dataset.index;
-    console.info('id='+id);
-    console.info('index=' + index);
-    console.info('name=' + this.data.projectName);
-
-    
 
     if(index == "交付日期"){
         wx.navigateTo({
           url: '../schedule/schedule?id=' + id + '&name=' + this.data.projectName,
         })
     }
-
 
     if (index == "团队情况") {
       wx.navigateTo({
@@ -243,15 +237,15 @@ Page({
       //   needMove: true,
       //   isTouchMove: false //默认隐藏删除
       // }),
-      // this.data.items.push({
-      //   title: "团队情况",
-      //   id: item.projectId,
-      //   content: item.hasProduction ? '已组建':'未组建',
-      //   contentInfo: '',
-      //   info: "详情",
-      //   needMove: item.hasProduction,
-      //   isTouchMove: false //默认隐藏删除
-      // }),
+      this.data.items.push({
+        title: "团队情况",
+        id: item.projectId,
+        content: item.hasProduction ? '已组建':'未组建',
+        contentInfo: '',
+        info: "详情",
+        needMove: item.hasProduction,
+        isTouchMove: false //默认隐藏删除
+      }),
         
       this.data.items.push({
         title: "参考影片",

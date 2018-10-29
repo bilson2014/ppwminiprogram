@@ -21,7 +21,8 @@ Page({
     taxRate:0,
     total:0,
     subTotal:0,
-    tax:0
+    tax:0,
+    subRax:0.
   },
 
   tel: function () {
@@ -137,7 +138,8 @@ Page({
           taxRate : res.data.result.taxRate,
           discountRate: res.data.result.discount,
           discount : res.data.result.total - res.data.result.discount,
-          tax: (res.data.result.total - res.data.result.subTotal).toFixed(1) 
+          subRax: parseInt(res.data.result.total) + parseInt(res.data.result.discount), 
+          tax: (res.data.result.subTotal * (res.data.result.taxRate/100)).toFixed(2) 
         })
       }
     })

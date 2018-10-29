@@ -126,10 +126,10 @@ Page({
         var day = date.getDate();//
         var index = true;
         var theDay = false;
-        var checkDay = parseInt(years + '' + months + '' + day);
         if(day<10){
           day='0'+day;
         }
+         var checkDay = parseInt(years + '' + months + '' + day);
 
       
         
